@@ -11,9 +11,9 @@ plot_data   = true;
 real_robots = false;
 plot_inline = false;
 
-filename          = "_3";                      % initialCondition (and storage name) - do not change for running with GA
+filename          = "example";                      % storage name
 seedDir           = "centralized_plan/Release";
-initConditionsTxt = sprintf("%s/instance%s.txt", seedDir, filename);  % Text file with initial centralized plan
+initConditionsTxt = sprintf("%s/instance_3.txt", seedDir, filename);  % Text file with initial centralized plan
 allocationsTxt    = sprintf("%s/allocation2.txt", seedDir); %Output of GA with rendezvous (allocation1.txt is the output without rendezvous)
 
 %Init conditions
