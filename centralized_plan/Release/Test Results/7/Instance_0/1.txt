@@ -1,0 +1,2 @@
+Cost 8
+Run Time 10.604

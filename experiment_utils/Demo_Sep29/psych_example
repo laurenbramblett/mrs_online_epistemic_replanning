@@ -1,0 +1,21 @@
+reloop = true;
+Kbi = PsychHID('Devices',-1); % device -1 should correspond to the default keyboard
+keylist = zeros(256,1); keylist(KbName('ESCAPE')) = 1; % only check whether escape key was pressed
+KbQueueCreate(Kbi,keylist);
+KbQueueStart(Kbi);
+ctr=0;
+while reloop
+    ctr=ctr+1;
+    
+    fprintf('ctr=%d: test keypress now.\n',ctr);
+    pause(2);
+    was_pressed = KbQueueCheck(Kbi);
+    if was_pressed
+        fprintf('selected key was pressed during this iteration\n')
+    end
+    if ctr == 12
+        reloop = false;
+    end
+    KbQueueFlush(Kbi);
+end
+KbQueueStop(Kbi)
