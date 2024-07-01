@@ -41,9 +41,9 @@ end
 %Failure simulations
 numIters    = 1500;
 goalReached = 1;
-whenFail    = [350, 150];%randi([50 80]); %60
-whoFail     = [2 3];%[1 4];%randi(numBots); %2
-howFail     = [2 2];%randi([2 numParticles]); %2
+whenFail    = 60;%randi([50 80]); %60
+whoFail     = 3;%[1 4];%randi(numBots);
+howFail     = 2;%randi([2 numParticles]);
 numHistory  = 60;
 
 if real_robots
