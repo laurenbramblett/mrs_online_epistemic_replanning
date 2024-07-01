@@ -57,7 +57,7 @@ if robots(k).state == "Do Rz" || robots(k).state == "Do Comm"
                 robots(k).dfwm = unique([robots(k).dfwm whichBot]);
             end
         end
-    elseif sum(robots(k).plan(3) == robots(k).dfwm)>0
+    elseif sum(robots(k).plan(:,3) == robots(k).dfwm)>0
         robots(k).plan(1,:) = [];
         if ~isempty(robots(k).plan)
             robots(k).goalLoc = robots(k).plan(1,:);
